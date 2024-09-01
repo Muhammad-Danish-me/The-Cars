@@ -16,7 +16,7 @@ var cars = {
       engine: "1.5L",
       seatCapacity: "5",
       fuelTankCapacity: "56 L",
-      image: "images/HondaCity.jpg",
+      image: "images/accord.jpeg",
     },
     civic: {
       carName: "Honda Civic",
@@ -25,7 +25,7 @@ var cars = {
       engine: "2.0L",
       seatCapacity: "5",
       fuelTankCapacity: "47 L",
-      image: "images/HondaCity.jpg",
+      image: "images/civic.jpeg",
     },
     crv: {
       carName: "Honda CR-V",
@@ -34,7 +34,7 @@ var cars = {
       engine: "2.4L",
       seatCapacity: "5",
       fuelTankCapacity: "57 L",
-      image: "images/HondaCity.jpg",
+      image: "images/crv.jpeg",
     },
     jazz: {
       carName: "Honda Jazz",
@@ -43,7 +43,7 @@ var cars = {
       engine: "1.2L",
       seatCapacity: "5",
       fuelTankCapacity: "40 L",
-      image: "images/HondaCity.jpg",
+      image: "images/jazz.jpeg",
     },
     hr_v: {
       carName: "Honda HR-V",
@@ -52,7 +52,7 @@ var cars = {
       engine: "1.8L",
       seatCapacity: "5",
       fuelTankCapacity: "50 L",
-      image: "images/HondaCity.jpg",
+      image: "images/hrv.jpeg",
     },
     pilot: {
       carName: "Honda Pilot",
@@ -61,7 +61,7 @@ var cars = {
       engine: "3.5L",
       seatCapacity: "7",
       fuelTankCapacity: "74 L",
-      image: "images/HondaCity.jpg",
+      image: "images/pilot.jpeg",
     },
     odyssey: {
       carName: "Honda Odyssey",
@@ -70,7 +70,7 @@ var cars = {
       engine: "3.5L",
       seatCapacity: "7",
       fuelTankCapacity: "68 L",
-      image: "images/HondaCity.jpg",
+      image: "images/odyssey.jpeg",
     },
     ridgeline: {
       carName: "Honda Ridgeline",
@@ -79,7 +79,7 @@ var cars = {
       engine: "3.5L",
       seatCapacity: "5",
       fuelTankCapacity: "73 L",
-      image: "images/HondaCity.jpg",
+      image: "images/ridgeline.jpeg",
     },
     fit: {
       carName: "Honda Fit",
@@ -88,7 +88,7 @@ var cars = {
       engine: "1.5L",
       seatCapacity: "5",
       fuelTankCapacity: "40 L",
-      image: "images/HondaCity.jpg",
+      image: "images/fit.jpeg",
     },
   },
 
@@ -281,20 +281,20 @@ var cars = {
 
 let selectCompany = document.getElementById("company");
 let selectModel = document.getElementById("model");
-
-for (let company in cars) {
-  // console.log(key)
-  selectCompany.innerHTML += `<option value = "${company}">${company} </option>`;
-}
-
-function displayModel() {
-  selectModel.innerHTML = `<option> Select Model </option>`;
-  for (let model in cars[selectCompany.value]) {
-    selectModel.innerHTML += `<option value = "${model}">${model} </option>`;
-  }
-}
-
+let search = document.getElementById("search");
 let allCars = document.getElementById("allCars");
+
+// for (let company in cars) {
+//   selectCompany.innerHTML += `<option value = "${company}">${company} </option>`;
+//   // console.log(company)
+// }
+
+// function displayModel() {
+//   selectModel.innerHTML = `<option> Select Model </option>`;
+//   for (let model in cars[selectCompany.value]) {
+//     selectModel.innerHTML += `<option value = "${model}">${model} </option>`;
+//   }
+// }
 for (let company in cars) {
   const companies = cars[company];
   for (let model in companies) {

@@ -1,18 +1,18 @@
 /* body {
   width: 100%;
 } */
-.container {
+.my-container {
   width: 1400px;
   margin: auto;
 }
 header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border: 1px solid black;
   border-radius: 50px;
-  padding: 10px;
+  padding: 11px;
 }
 header select {
   background-color: black;
@@ -30,7 +30,7 @@ header button {
   font-size: 1em;
   font-weight: bold;
 }
-#allCars{
+#allCars {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
