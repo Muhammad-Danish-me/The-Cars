@@ -278,41 +278,24 @@ var cars = {
     },
   },
 };
-
-let selectCompany = document.getElementById("company");
-let selectModel = document.getElementById("model");
-let search = document.getElementById("search");
 let allCars = document.getElementById("allCars");
-
-// for (let company in cars) {
-//   selectCompany.innerHTML += `<option value = "${company}">${company} </option>`;
-//   // console.log(company)
-// }
-
-// function displayModel() {
-//   selectModel.innerHTML = `<option> Select Model </option>`;
-//   for (let model in cars[selectCompany.value]) {
-//     selectModel.innerHTML += `<option value = "${model}">${model} </option>`;
-//   }
-// }
-for (let company in cars) {
-  const companies = cars[company];
-  for (let model in companies) {
-    console.log(companies[model]);
-    const models = companies[model];
-    // console.log(models.carName)
+for (company in cars) {
+  let companies = cars[company];
+  // console.log(companies)
+  for (model in companies) {
+    let models = companies[model];
     allCars.innerHTML += `<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="${models.image}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">${models.carName}</h5>
-    <p class="card-text">Model: ${models.model}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Fuel Type: ${models.fuelType}</li>
-    <li class="list-group-item">Engine: ${models.engine}</li>
-    <li class="list-group-item">Seat Capacity: ${models.seatCapacity}</li>
-    <li class="list-group-item">Fuel Tank Capacity: ${models.fuelTankCapacity}</li>
-  </ul>
-</div>`;
+    <img class="card-img-top" src="${models.image}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">${models.carName}</h5>
+      <p class="card-text">Model: ${models.model}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Fuel Type: ${models.fuelType}</li>
+      <li class="list-group-item">Engine: ${models.engine}</li>
+      <li class="list-group-item">Seat Capacity: ${models.seatCapacity}</li>
+      <li class="list-group-item">Fuel Tank Capacity: ${models.fuelTankCapacity}</li>
+    </ul>
+  </div>`;
   }
 }
